@@ -1,0 +1,11 @@
+name = Search Slide
+description = Adds functionality to search to toggle it open and closed.
+core = 7.x
+
+dependencies[] = search
+dependencies[] = fawesome
+
+scripts[] = classie.js
+scripts[] = uisearch.js
+
+stylesheets[all][] = search-reveal.css

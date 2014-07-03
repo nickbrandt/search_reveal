@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * Adds template files for search
+ */
+
+// update the search_block_form template of the search module
+function search_reveal_theme_registry_alter(&$theme_registry) {
+
+  // tell the system to look in the "templates" directory for search_block_form
+  $theme_registry['search_block_form']['theme paths'] = array(0 => drupal_get_path('module', 'search_reveal') . '/templates');
+  $theme_registry['search_block_form']['theme path'] = drupal_get_path('module', 'search_reveal') . '/templates';
+  $theme_registry['search_block_form']['path'] = drupal_get_path('module', 'search_reveal') . '/templates';
+
+  // tell the theme system which templates to use
+  $theme_registry['search_block_form']['template'] = 'search-block-form';
+}
+
+// add search block template
+function search_reveal_theme($existing, $type, $theme, $path) {  
+	$themes['block__search'] = array(
+	    'variables' => array('block' => array()),   
+	    'template' => 'block--search',
+	    'path' => $path . '/templates',
+	  );
+ 
+	return $themes; 
+}
