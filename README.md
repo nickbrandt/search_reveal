@@ -1,5 +1,4 @@
-# Search Reveal
-===============
+#Search Reveal
 
 ## Overview
 Adds functionality to Drupal search module for simple slide reveal effect.
